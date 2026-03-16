@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Archivo:wght@400;700&display=swap');
 
 * {
     margin: 0;
@@ -7,11 +7,19 @@
     font-family: 'Inter', sans-serif;
 }
 
-body {
+/* Ajustes para o ambiente React */
+html, body, #root {
+    height: 100%;
+    width: 100%;
     background-color: #009c00;
-    height: 100vh;
+    overflow-x: hidden;
+}
+
+.app-wrapper {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+    background-color: #009c00;
 }
 
 /* Header */
@@ -20,6 +28,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 25px;
+    width: 100%;
 }
 
 .logo {
@@ -27,15 +36,12 @@ body {
     flex-direction: row; 
     align-items: center;
     justify-content: flex-start;
-    
     width: 185px;             
     height: 50px;             
     gap: 10px;                
-    
-    font-size: 24px;          /* Ajustado para caber nos 50px de altura */
+    font-size: 24px;          
     font-weight: 800;
     color: #000;
-    
     overflow: hidden; 
 }
 
@@ -44,106 +50,91 @@ body {
     width: auto;
 }
 
+.back-button {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.back-button:hover {
+    transform: scale(1.1);
+}
+
 .back-button img {
     height: 30px;
-    border: 14px;
     width: 15px;
 }
 
 /* Container principal (O Card Claro) */
 .container {
     flex: 1;
-    padding: 0 10px 10px 10px; /* Margem para o fundo verde aparecer */
+    padding: 0 15px 15px 15px;
+    display: flex;
+    flex-direction: column;
 }
 
 .content-card {
-    background-color: #c5f4b6; /
-    height: 100%;
+    background-color: #c5f4b6;
+    flex: 1;
     border-radius: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px 20px;
+    padding: 40px 20px;
     text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    width: 1220px;
-    height: 40px;
-    
-    /* Tipografia e Alinhamento */
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 35px;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    max-width: 100%;
-    overflow: hidden;
-    white-space: nowrap; /* Impede que o texto quebre em duas linhas e saia dos 40px */
+    color: #000;
 }
 
 /* Grid de Categorias */
 .categorias-grid {
-    /* Fluxo e Alinhamento */
     display: flex;
-    flex-direction: row;         /* Fluxo horizontal */
-    justify-content: space-between; /* Justificar space-between */
-    align-items: flex-start;
-    
-    /* Dimensões */
-    width: 343px;                /* Largura Preenchimento 343px */
-    max-width: 343px;            /* Largura máxima 343px */
-    height: 105px;               /* Altura Envolver 105px */
-    
-    /* Espaçamento */
-    padding-top: 16px;           /* Espaçamento superior 16px */
-    padding-bottom: 16px;        /* Espaçamento inferior 16px */
-    
-    /* Borda removida conforme solicitado */
-    border-bottom: none; 
-    
-    /* Ajuste de layout */
+    flex-direction: row;         
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+    max-width: 400px;            
+    gap: 15px;
+    padding: 16px 0;
     margin-bottom: 40px;
-    box-sizing: border-box;
 }
 
 .categoria-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 6px;
-    height: 100px;
+    gap: 8px;
+    flex: 1;
 }
 
 .icone-box {
-    width: 46px;
-    height: 54px;
-    
+    width: 50px;
+    height: 55px;
     background-color: #fff;
-    opacity: 1;
-    transform: rotate(0deg);
-    
-    border: 1px solid #000;
-    border-radius: 10px;
-    
-    padding: 12px 8px;
+    border: 2px solid #000;
+    border-radius: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    box-sizing: border-box;
-    
-    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.8); 
-    
-    transition: box-shadow 0.2s ease-in-out;
+    font-size: 24px;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 1); 
+    transition: all 0.2s ease;
+    cursor: pointer;
 }
 
 .icone-box:hover {
-    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8); /* Sombra diminui levemente ao clicar/hover */
-    cursor: pointer;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 1);
+}
+
+.icone-box:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
 }
 
 .legenda {
@@ -153,7 +144,7 @@ h1 {
     text-align: center;
 }
 
-/* Classes de cores das legendas */
+/* Cores das legendas */
 .vinho { color: #800000; }
 .azul-escuro { color: #000080; }
 .verde-escuro { color: #006400; }
@@ -162,85 +153,74 @@ h1 {
 /* Barra de Busca */
 .busca-container {
     width: 100%;
-    max-width: 420px;
+    max-width: 400px;
     margin-bottom: 30px;
 }
 
 .busca-barra {
-    width: 400px;           
-    height: 44px;           
-    max-width: 400px;       
-    
+    width: 100%;           
+    height: 50px;           
     background-color: #00ff00; 
-    opacity: 1;             
-    transform: rotate(0deg); 
-    
     border: 2px solid #000; 
-    border-radius: 0px;
-    
     display: flex;
     align-items: center;
-    padding: 10px;          
-    gap: 8px;               
-    
-    box-sizing: border-box; 
+    padding: 0 15px;
+    gap: 10px;
+    box-shadow: 4px 4px 0px #000;
 }
 
 .busca-lupa img {
-    width: 20px;
-    margin-right: 10px;
+    width: 22px;
     display: block;
 }
 
 .busca-input {
-    font-family: 'Archivo';
+    font-family: 'Archivo', sans-serif;
     font-weight: 400;          
-    font-style: normal;        
-    font-size: 14px;           
-    line-height: 1;            
-    letter-spacing: 0;         
-    
+    font-size: 16px;           
     flex: 1;
     height: 100%;
     background: transparent;
     border: none;
     outline: none;
+    color: #000;
 }
 
 .busca-input::placeholder {
-    font-family: 'Archivo', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.6);
+    color: rgba(0, 0, 0, 0.5);
 }
+
 /* Rodapé com Personagem */
 .rodape-ilustracao {
-    margin-top: auto; /* Empurra para o final do card */
+    margin-top: auto; 
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 20px;
+    width: 100%;
 }
 
 .img-personagem {
-    width: 580px; 
-    height: 350px;
-    margin-bottom: 15px;
-    mix-blend-mode: multiply;
+    width: 100%;
+    max-width: 450px; 
+    height: auto;
+    margin-bottom: 20px;
+    /* Ajuste para remover fundo branco se a imagem tiver */
+    mix-blend-mode: multiply; 
 }
 
 .texto-ajuda {
-    
     font-family: 'Archivo', sans-serif;
-    font-weight: 400;           
-    font-style: normal;         
-    font-size: 18px;            
-    line-height: 1;             
-    letter-spacing: 0;          
-    
-    text-align: center;         
+    font-size: 16px;            
+    line-height: 1.4;             
     color: #000;
-    
-    max-width: 450px;           
+    max-width: 300px;           
     margin: 0 auto;             
+}
+
+/* Responsividade Básica */
+@media (max-width: 480px) {
+    h1 { font-size: 22px; }
+    .categorias-grid { gap: 8px; }
+    .icone-box { width: 45px; height: 50px; }
+    .texto-ajuda { font-size: 14px; }
 }
