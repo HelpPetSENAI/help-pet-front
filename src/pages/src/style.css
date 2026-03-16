@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #009c00;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: flex-start;
+    
+    width: 185px;             
+    height: 50px;             
+    gap: 10px;                
+    
+    font-size: 24px;          /* Ajustado para caber nos 50px de altura */
+    font-weight: 800;
+    color: #000;
+    
+    overflow: hidden; 
+}
+
+.logo img {
+    height: 100%; 
+    width: auto;
+}
+
+.back-button img {
+    height: 30px;
+    border: 14px;
+    width: 15px;
+}
+
+/* Container principal (O Card Claro) */
+.container {
+    flex: 1;
+    padding: 0 10px 10px 10px; /* Margem para o fundo verde aparecer */
+}
+
+.content-card {
+    background-color: #c5f4b6; /
+    height: 100%;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+h1 {
+    width: 1220px;
+    height: 40px;
+    
+    /* Tipografia e Alinhamento */
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 35px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap; /* Impede que o texto quebre em duas linhas e saia dos 40px */
+}
+
+/* Grid de Categorias */
+.categorias-grid {
+    /* Fluxo e Alinhamento */
+    display: flex;
+    flex-direction: row;         /* Fluxo horizontal */
+    justify-content: space-between; /* Justificar space-between */
+    align-items: flex-start;
+    
+    /* Dimensões */
+    width: 343px;                /* Largura Preenchimento 343px */
+    max-width: 343px;            /* Largura máxima 343px */
+    height: 105px;               /* Altura Envolver 105px */
+    
+    /* Espaçamento */
+    padding-top: 16px;           /* Espaçamento superior 16px */
+    padding-bottom: 16px;        /* Espaçamento inferior 16px */
+    
+    /* Borda removida conforme solicitado */
+    border-bottom: none; 
+    
+    /* Ajuste de layout */
+    margin-bottom: 40px;
+    box-sizing: border-box;
+}
+
+.categoria-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    height: 100px;
+}
+
+.icone-box {
+    width: 46px;
+    height: 54px;
+    
+    background-color: #fff;
+    opacity: 1;
+    transform: rotate(0deg);
+    
+    border: 1px solid #000;
+    border-radius: 10px;
+    
+    padding: 12px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    box-sizing: border-box;
+    
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.8); 
+    
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.icone-box:hover {
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8); /* Sombra diminui levemente ao clicar/hover */
+    cursor: pointer;
+}
+
+.legenda {
+    font-family: 'Archivo', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Classes de cores das legendas */
+.vinho { color: #800000; }
+.azul-escuro { color: #000080; }
+.verde-escuro { color: #006400; }
+.preto { color: #000000; }
+
+/* Barra de Busca */
+.busca-container {
+    width: 100%;
+    max-width: 420px;
+    margin-bottom: 30px;
+}
+
+.busca-barra {
+    width: 400px;           
+    height: 44px;           
+    max-width: 400px;       
+    
+    background-color: #00ff00; 
+    opacity: 1;             
+    transform: rotate(0deg); 
+    
+    border: 2px solid #000; 
+    border-radius: 0px;
+    
+    display: flex;
+    align-items: center;
+    padding: 10px;          
+    gap: 8px;               
+    
+    box-sizing: border-box; 
+}
+
+.busca-lupa img {
+    width: 20px;
+    margin-right: 10px;
+    display: block;
+}
+
+.busca-input {
+    font-family: 'Archivo';
+    font-weight: 400;          
+    font-style: normal;        
+    font-size: 14px;           
+    line-height: 1;            
+    letter-spacing: 0;         
+    
+    flex: 1;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.busca-input::placeholder {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.6);
+}
+/* Rodapé com Personagem */
+.rodape-ilustracao {
+    margin-top: auto; /* Empurra para o final do card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.img-personagem {
+    width: 580px; 
+    height: 350px;
+    margin-bottom: 15px;
+    mix-blend-mode: multiply;
+}
+
+.texto-ajuda {
+    
+    font-family: 'Archivo', sans-serif;
+    font-weight: 400;           
+    font-style: normal;         
+    font-size: 18px;            
+    line-height: 1;             
+    letter-spacing: 0;          
+    
+    text-align: center;         
+    color: #000;
+    
+    max-width: 450px;           
+    margin: 0 auto;             
+}
