@@ -1,4 +1,4 @@
-import { StyledButton } from "./ButtonS";
+import { StyledButton } from "./ButtonStyle";
 
 export default function Button({content}) {
     return(
