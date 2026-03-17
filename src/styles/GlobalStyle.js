@@ -10,8 +10,8 @@ const GlobalStyle = createGlobalStyle`
     }
 
     :root {
-        --logo-font: font-family: "Irish Grover", system-ui;
-        --main-font: font-family: "Archivo", sans-serif;
+        --logo-font:"Irish Grover", system-ui;
+        --main-font:"Archivo", sans-serif;
 
         --clr-green-50: #E6FFE6;
         --clr-green-100: #B8FFB8;
