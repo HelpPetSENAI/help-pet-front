@@ -14,6 +14,8 @@ export const CardContainer= styled.a`
     font-weight: 700;
     line-height: normal;
     text-transform: capitalize;
+    width: 46px;
+    height: 56px;
 
 `
 export const CardEmoji= styled.div`
@@ -21,12 +23,13 @@ export const CardEmoji= styled.div`
     padding: 12px 8px;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     gap: 10px;
     border-radius: 10px;
     border: 1px solid var(--clr-green-1000);
     background: var(--clr-neutral-100);
     box-shadow: 2px 2px 0 0 var(--clr-green-1000);
+   
 `
 export const CardSpan = styled.span`
     font-size: 30px;
