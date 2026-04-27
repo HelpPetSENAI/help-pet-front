@@ -1,4 +1,4 @@
-import { StyledChatListElement } from "./ChatListElementStyles";
+import { StyledChatListElement } from "../styles/ChatListElementStyles";
 import logo from "../../../assets/icons/G6GreenBall.svg";
 
 export default function ChatListElement() {
@@ -7,7 +7,7 @@ export default function ChatListElement() {
                 <img className="chat-avatar" src={logo} alt="avatar" />
                 <div className="chat-data">
                     <span className="chat-username">Pessoa</span>
-                    <span className="chat-last-message">Última mensagem</span>
+                    <span className="chat-last-message">A mensagem não aparece toda pois aparece "..."</span>
                 </div>
                 <div className="chat-right">
                     <span className="last-message-time">12:00</span>

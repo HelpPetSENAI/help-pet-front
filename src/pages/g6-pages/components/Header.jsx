@@ -1,4 +1,4 @@
-import { StyledHeader } from "./HeaderStyles";
+import { StyledHeader } from "../styles/HeaderStyles";
 import back from "../../../assets/icons/G6HeaderBackArrow.svg";
 import logo from "../../../assets/icons/G6HeaderLogo.svg";
 
