@@ -3,7 +3,8 @@ import ComingSoonPage from './pages/CommingSoonPage.jsx'
 import NotFoundPage from './pages/NotFoundPage.jsx'
 import GlobalStyle from './styles/GlobalStyle.js'
 import ExamplePage from './pages/ExamplePage.jsx'
-import PageG6 from './pages/g6-pages/PageG6.jsx'
+import Messages from './pages/g6-pages/Messages.jsx'
+import Chat from './pages/g6-pages/Chat.jsx'
 
 // Criando uma array para definir as rotas do site utilizando a função createBrowserRouter importada
 const router = createBrowserRouter([
@@ -19,9 +20,14 @@ const router = createBrowserRouter([
     element: <ExamplePage />
   },
   {
-    path: '/page-g6',
-    element: <PageG6 />
+    path: '/messages',
+    element: <Messages />
+  },
+  {
+    path: '/messages/chat',
+    element: <Chat />
   }
+
 ])
 
 export default function App() {
