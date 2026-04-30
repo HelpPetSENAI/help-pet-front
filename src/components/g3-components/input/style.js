@@ -8,7 +8,8 @@ export const Input = styled.div`
     gap: 8px;
     align-self: stretch;
     background: var(--clr-green-500);
-    border:2px solid var(--clr-green-1000);
+    border:2px solid var(--clr-green-1000);\
+    margin: 20px 0;
     
 
 `
@@ -21,10 +22,9 @@ export const Inputtext = styled.input`
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
+
+    outline: none;
+    box-shadow: none;
     
-    
-    
-    :focus, :focus-visible {
-        outline: none;
-    }    
+   
 `

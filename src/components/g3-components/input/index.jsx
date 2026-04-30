@@ -1,4 +1,4 @@
-import Searchicon from "../../../assets/icons/search-icon.jsx";
+import Searchicon from "../../../assets/icons/g3/search-icon.jsx";
 import {Input, Inputtext} from "./style.js";
 
 

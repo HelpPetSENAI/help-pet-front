@@ -16,6 +16,7 @@ export const CardContainer= styled.a`
     text-transform: capitalize;
     width: 46px;
     height: 56px;
+    margin: 16px 0;
 
 `
 export const CardEmoji= styled.div`
