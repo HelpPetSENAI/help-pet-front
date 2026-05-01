@@ -3,7 +3,7 @@ import ComingSoonPage from './pages/CommingSoonPage.jsx'
 import NotFoundPage from './pages/NotFoundPage.jsx'
 import GlobalStyle from './styles/GlobalStyle.js'
 import ExamplePage from './pages/ExamplePage.jsx'
-import SearchPage405 from "./pages/g3-pages/SearchPage-405.jsx";
+import SearchPage from "./pages/g3-pages/SearchPage.jsx";
 
 // Criando uma array para definir as rotas do site utilizando a função createBrowserRouter importada
 const router = createBrowserRouter([
@@ -19,8 +19,8 @@ const router = createBrowserRouter([
     element: <ExamplePage />
   },
   {
-    path: '/g3',
-    element: <SearchPage405 />,
+    path: '/searchPage',
+    element: <SearchPage />,
   }
 ])
 
