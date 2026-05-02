@@ -4,6 +4,7 @@ import ComingSoonPage from "./pages/CommingSoonPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 import ExamplePage from "./pages/ExamplePage.jsx";
 import Login from "./pages/Login/Login.jsx";
+import Background from "./components/Background/Background.jsx";
 
 import GlobalStyle from "./styles/GlobalStyle.js";
 
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/login",
-    element: <Login />,
+    element: <Background><Login /></Background>,
   },
   {
     path: "*",
