@@ -7,9 +7,11 @@ import {
   forgotStyle,
 } from "../../styles/FormStyles.js";
 import Logo from "../../assets/images/Login/Logo.svg";
+import Background from "../Background/Background.jsx"
 
 export default function LoginForm({ userType }) {
   return (
+    <Background>
     <div style={containerStyle}>
 
     <img src={Logo} alt="Logo" style=
@@ -37,5 +39,6 @@ export default function LoginForm({ userType }) {
 
       <input type="password" placeholder="Digite sua senha" style={inputStyle} />
     </div>
+    </Background>
   );
 }
