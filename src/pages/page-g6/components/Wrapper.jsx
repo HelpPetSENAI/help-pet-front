@@ -5,7 +5,6 @@ export default function Wrapper({ children }) {
         <StyledWrapper>
             <section className="wrapper">
                 {children}
-                <div className="ghost"></div>
             </section>
         </StyledWrapper>
     )
