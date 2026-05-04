@@ -7,11 +7,10 @@ export const StyledChatListElement = styled.section`
     align-items: center;
     justify-content: space-between;
     
-    width: auto;
+    width: 100%;
     height: 75px;
     gap: 6px;
-    margin: 0 20px 0 20px;
-    padding: 0 10px 0 10px;
+    padding: 0 10px;
 
     &:not(:last-child) {
         border-bottom: 1px solid var(--clr-cyan-900);
