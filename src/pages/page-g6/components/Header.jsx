@@ -7,7 +7,7 @@ export default function Header() {
         <StyledHeader>
             <BackArrow className="back" aria-label="Voltar" />
             <Logo className="logo" aria-label="Help Pet" />
-            <div className="ghost"></div>
+            <div className="ghost"></div> {/* Elemento fantasma para alinhamento */}
         </StyledHeader>
     )
 }
