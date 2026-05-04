@@ -1,14 +1,15 @@
-import {Fragment} from "react";
 import CategoryCard from "../../components/g3-components/filtro/index.jsx";
 import {Filter, Info, Main, Title, WrapperContent} from "./Style.js";
 import Input from "../../components/g3-components/input/index.jsx";
 import Header from "../../components/g3-components/header/index.jsx";
-import SectionPet from "../../components/g3-components/SectionPet/index.jsx";
 import Footer from "../../components/g3-components/footer/index.jsx";
+import SectionPet from "../../components/g3-components/SectionPet/index.jsx";
 
 
 
 export default function SearchPage() {
+
+
     return (
 
         <Main>
@@ -29,6 +30,7 @@ export default function SearchPage() {
                     <Input/>
                 </Info>
                 <SectionPet/>
+
             </WrapperContent>
 
             <Footer/>

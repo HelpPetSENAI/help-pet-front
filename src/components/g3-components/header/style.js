@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const PetHeader = styled.header`
     width: 100%;
     height: 75px;
-    background-color: var(--clr-green-500);
     display: flex;
     justify-content: space-between;
     align-items: center;

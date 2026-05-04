@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "../../components/g3/Header";
 import {SearchPage405Container, SearchPage405Content, SearchPage405Input} from "./style.js";
-import {Link} from "react-router-dom";
+import Header from "../../components/g3-components/header/index.jsx";
+
 
 
 export default function SearchPage405() {

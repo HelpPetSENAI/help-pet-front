@@ -28,7 +28,7 @@ export const Main = styled.div`
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background: var(--clr-green-500);
+    background: var(--clr-green-700);
     
 `
 
