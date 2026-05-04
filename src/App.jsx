@@ -4,6 +4,7 @@ import NotFoundPage from './pages/NotFoundPage.jsx'
 import GlobalStyle from './styles/GlobalStyle.js'
 import ExamplePage from './pages/ExamplePage.jsx'
 import MessagePageG6 from './pages/page-g6/MessagePageG6.jsx'
+import Chat from './pages/page-g6/Chat.jsx';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
     path: '/message',
     element: <MessagePageG6 />
   },
+  {
+    path: '/message/chat',
+    element: <Chat />
+  }
   
 ])
 
