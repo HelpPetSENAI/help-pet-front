@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 export default function ConversationWrapper() {
     const navigate = useNavigate();
     const handleChatClick = () => {
-        navigate('/messages/chat');
+        navigate('/message/chat');
     }
 
     return (
