@@ -12,6 +12,8 @@ export const StyledHeader = styled.header`
     width: 100vw;
     height: 75px;
 
+    .back { cursor: pointer; }
+
     .ghost {
         height: 30px;
         width: 19px;
