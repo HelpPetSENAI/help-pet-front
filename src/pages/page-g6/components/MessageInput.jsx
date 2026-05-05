@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { StyledMessageInput } from '../styles/MessageInputStyles';
 import Send from '../../../assets/icons/SendMessageIcon'
 
-export default function MessageInput({ onSendMessage }) {
+export default function MessageInput({ onSendMessage, className }) {
     const [message, setMessage] = useState("");
 
     function handleSend() {
@@ -19,7 +19,7 @@ export default function MessageInput({ onSendMessage }) {
     }
 
     return (
-        <StyledMessageInput>
+        <StyledMessageInput className={className}>
             <input
                 type="text"
                 className='message-input'
