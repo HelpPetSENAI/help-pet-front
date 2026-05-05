@@ -19,4 +19,11 @@ color: #1d3d2f;
     max-width: 680px;
     line-height: 1.6;
   }
+
+  @media (min-width: 769px) {
+      
+      .message-dock { display: none;}
+      .ghost-element { display: none;} 
+      
+  }
 `
