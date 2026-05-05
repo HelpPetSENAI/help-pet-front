@@ -13,6 +13,10 @@ export const StyledConversationWrapper = styled.section`
     width: 100%;
     height: calc(100vh - 75px);
 
+    .chat-list-panel {
+        width: 100%;
+    }
+
     .chats-group {
         width: calc(100% + 40px);
         margin: 0 -20px;
@@ -23,6 +27,8 @@ export const StyledConversationWrapper = styled.section`
         font-size: 32px;
         font-weight: 700;
         margin-bottom: 30px;
+        width: 100%;
+        text-align: center;
     }
 
     .no-chats-message {
@@ -35,14 +41,86 @@ export const StyledConversationWrapper = styled.section`
     .desktop-chat { display: none; }
 
     @media (min-width: 769px) {
-        .desktop-chat { display: flex; }
-
-        .main {
+        .wrapper.main {
             display: flex;
             flex-direction: row;
+            align-items: stretch;
 
             width: 100vw;
-            height: 100vh;
+            min-height: calc(100vh - 75px);
+            height: calc(100vh - 75px);
+            padding: 0;
+            border-radius: 30px 30px 0 0;
+        }
+
+        .chat-list-panel {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 290px;
+            min-width: 290px;
+            height: 100%;
+            padding: 20px 12px;
+            border-right: 2px solid var(--clr-green-1000);
+            background: var(--clr-neutral-100);
+        }
+
+        .chat-list-title {
+            margin-bottom: 20px;
+        }
+
+        .chats-group {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .desktop-chat {
+            position: relative;
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            align-items: center;
+            min-width: 0;
+            height: 100%;
+            padding: 30px 24px;
+            background: #effcef;
+        }
+
+        .recipient-username {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .desktop-messages {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            justify-content: flex-end;
+            width: 100%;
+            gap: 8px;
+            overflow-y: auto;
+            padding: 0 0 20px;
+        }
+
+        .desktop-empty-message {
+            margin: auto;
+            font-size: 28px;
+            font-weight: 400;
+            line-height: 1;
+            text-align: center;
+            color: var(--clr-neutral-1000);
+        }
+
+        .desktop-message-input {
+            position: static;
+            width: 100%;
+            height: 36px;
+            min-height: 36px;
+            padding: 0 14px;
+            box-shadow: none;
+            z-index: 1;
         }
     }
 `
