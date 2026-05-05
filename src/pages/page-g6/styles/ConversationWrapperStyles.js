@@ -31,4 +31,18 @@ export const StyledConversationWrapper = styled.section`
         text-align: center;
         line-height: 100%;
     }
+
+    .desktop-chat { display: none; }
+
+    @media (min-width: 769px) {
+        .desktop-chat { display: flex; }
+
+        .main {
+            display: flex;
+            flex-direction: row;
+
+            width: 100vw;
+            height: 100vh;
+        }
+    }
 `
