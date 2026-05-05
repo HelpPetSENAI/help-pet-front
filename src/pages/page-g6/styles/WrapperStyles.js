@@ -5,7 +5,7 @@ export const StyledWrapper = styled.section`
     width: 100%;
 
     .wrapper {
-        padding: 30px 20px 30px 20px;
+        padding: 30px 20px 120px 20px;
         font-family: var(--main-font);
 
         width: 100%;
