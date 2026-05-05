@@ -24,6 +24,6 @@ color: #1d3d2f;
       
       .message-dock { display: none;}
       .ghost-element { display: none;} 
-      
+
   }
 `
