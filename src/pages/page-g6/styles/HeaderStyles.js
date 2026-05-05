@@ -13,9 +13,28 @@ export const StyledHeader = styled.header`
     height: 75px;
 
     .back { cursor: pointer; }
+    .help-pet-title { display: none; }
+    .brand-area { 
+        display: flex;
+        align-items: center;
+        gap: 10px; 
+    }
 
     .ghost {
         height: 30px;
         width: 19px;
+    }
+
+    @media (min-width: 769px) {
+        flex-direction: row-reverse;
+        padding: 12.5px 50px 12.5px 50px;
+
+        .ghost {
+            display: none;
+        }
+
+        .help-pet-title {
+            display: flex;
+        }
     }
 `
