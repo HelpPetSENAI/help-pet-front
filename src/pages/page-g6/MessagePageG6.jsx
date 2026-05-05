@@ -10,7 +10,7 @@ export default function MessagePageG6() {
         <Header/>
         <ConversationWrapper/>
       </div>
-      <Dock page='message'/>
+      <Dock page='message' className="message-dock"/>
     </MessagePageG6Styled>
   )
 }
