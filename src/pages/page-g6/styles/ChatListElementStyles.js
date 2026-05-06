@@ -9,8 +9,6 @@ export const StyledChatListElement = styled.section`
     
     width: 100%;
     height: 75px;
-    gap: 6px;
-    padding: 0 10px;
 
     &:not(:last-child) {
         border-bottom: 1px solid var(--clr-cyan-900);
