@@ -18,7 +18,7 @@ export const DockWrapper = styled.div`
     width: 80%;
   }
 
-  @media (min-width: 769px) {
+  @media (min-width: 768px) {
     display: none;
   }
 `
