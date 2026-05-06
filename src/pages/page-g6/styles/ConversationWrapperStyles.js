@@ -57,7 +57,7 @@ export const StyledConversationWrapper = styled.section`
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 290px;
+            width: 320px;
             min-width: 290px;
             height: 100%;
             padding: 20px 12px;
