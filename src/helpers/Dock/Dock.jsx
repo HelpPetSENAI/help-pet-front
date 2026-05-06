@@ -9,7 +9,7 @@ import DonatePetIcon from '../../assets/icons/DonatePetIcon'
 import MyDonateIcon from '../../assets/icons/MyDonateIcon'
 import SearchIcon from '../../assets/icons/SearchIcon'
 
-export default function Dock({ page = 'home' }) {
+export default function Dock({ page = 'home', className }) {
   const [isOpen, setIsOpen] = useState(false)
   const navigate = useNavigate()
 

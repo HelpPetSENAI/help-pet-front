@@ -7,13 +7,20 @@ export const DockWrapper = styled.div`
   position: fixed;
   bottom: 30px;
   gap: 30px;
-  width: 79.9%;
   padding: 15px 30px;
   background: var(--clr-green-500);
   border-radius: 40px;
   box-shadow: var(--gShadow-min);
   border: 2px solid var(--clr-green-1000);
   transition: all 0.24s ease;
+
+  @media (max-width: 400px){
+    width: 80%;
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 `
 
 export const DockCompact = styled.div`
