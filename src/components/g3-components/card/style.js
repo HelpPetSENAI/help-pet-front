@@ -53,4 +53,3 @@ export const TagWrapper = styled.div`
 `;
 
 
-export default DonationCard

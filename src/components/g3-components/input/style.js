@@ -2,7 +2,7 @@ import styled  from "styled-components";
 
 export const Input = styled.div`
     display: flex;
-    max-width: 400px;
+    width: 400px;
     padding: 10px;
     align-items: center;
     gap: 8px;
@@ -10,9 +10,15 @@ export const Input = styled.div`
     background: var(--clr-green-500);
     border:2px solid var(--clr-green-1000);\
     margin: 20px 0;
-    
 
-`
+    ${({ $status }) => $status === "success" &&`
+    width: 1220px;
+    `}
+    
+    
+`;
+
+
 export const Inputtext = styled.input`
     border: none;
     background: none;

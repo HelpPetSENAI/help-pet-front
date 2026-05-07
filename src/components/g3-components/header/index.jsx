@@ -10,7 +10,7 @@ function Header() {
             <LogoContainer>
                 <Logo />
             </LogoContainer>
-            <a href="/">
+            <a href="/searchPage">
                 <ArrowReturn />
             </a>
 

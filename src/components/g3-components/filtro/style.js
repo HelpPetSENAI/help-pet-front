@@ -35,3 +35,10 @@ export const CardEmoji= styled.div`
 export const CardSpan = styled.span`
     font-size: 30px;
 `
+
+export const CardWrapper= styled.div`
+    display: flex;
+    flex-direction: row;
+    gap: 17px;
+
+`

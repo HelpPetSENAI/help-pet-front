@@ -1,15 +1,26 @@
-import {CardContainer, CardEmoji, CardSpan} from "./style.js";
+import {CardContainer, CardEmoji, CardSpan, CardWrapper} from "./style.js";
 
 
-export default function CategoryCard({ emoji, category }) {
+
+export default function CategoryCard({ key, onClick, href, emoji, label }) {
     return (
-            <CardContainer href="">
-                <CardEmoji>
-                    <CardSpan>
-                        {emoji}
-                    </CardSpan>
-                </CardEmoji>
-                {category}
-            </CardContainer>
+        <CardWrapper>
+
+
+                    <CardContainer
+                        key={key}
+                        href={href}
+                        onClick={onClick}
+                    >
+                        <CardEmoji>
+                            <CardSpan>
+                                {emoji}
+                            </CardSpan>
+                        </CardEmoji>
+                        {label}
+                    </CardContainer>
+
+
+        </CardWrapper>
     )
 }

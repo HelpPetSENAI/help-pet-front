@@ -9,6 +9,7 @@ export const Filter = styled.div`
     flex: 1 0 0;
     align-self: stretch;
     gap: 17px;
+    
 
 `
 
@@ -29,13 +30,21 @@ export const Main = styled.div`
     display: flex;
     flex-direction: column;
     background: var(--clr-green-700);
+
+   
     
 `
+
 
 export const Info = styled.div`
 display: flex;
     align-items: center;
     flex-direction: column;
+    
+ 
+            
+
+
     
 
 `
@@ -51,29 +60,21 @@ export const WrapperContent = styled.div`
     border: 2px solid var(--clr-green-1000);
     background: var(--clr-green-100);
     gap: 30px;
+
+         ${({ $status }) => $status === "error" && `
+         justify-content: center;
+         `
+        }
+    
+`
+
+export const CardWrapper = styled.div`
+    display: flex;
+    gap: 26px;
+    flex-wrap: wrap ;
     
 `
 
 
-export const SearchPage405Container = styled.div`
-    background-color: #257E2B;
-    height: 100vh;
-    width: 100%;
-`
-
-export const SearchPage405Content = styled.div`
-    display: flex;
-    border: 2px solid black;
-    border-radius: 30px;
-    width: 100%;
-    background-color: #C8EFCA;
-    padding: 30px 30px 0 30px;
-    align-items: center;
-    gap: 30px;
-    flex: 1 0 0;
-    align-self: stretch;
-`
-export const SearchPage405Input = styled.input`
 
 
-`
