@@ -7,24 +7,38 @@ export const PetHeader = styled.header`
     justify-content: space-between;
     align-items: center;
     padding: 0 50px;
+    
+    @media (max-width: 768px){
+        flex-direction: row-reverse;
+       
+    }
 `;
 
 export const LogoContainer = styled.div `
     display: flex;
     align-items: center;
     gap: 10px;
+    
+    @media (max-width: 768px){
+        width: 100%;
+       justify-content: center;
+        
+    }
 `;
 
-export const LogoText = styled.p `
-    color: var(--clr-green-500);
-    text-align: center;
-    /* GShadow/min */
-    text-shadow: 2px 2px 0 var(--clr-green-1000);
-    -webkit-text-stroke-width: 1.4px;
-    -webkit-text-stroke-color: var(--clr-green-1000);
-    font-family: var(--logo-font);
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 100%; /* 36px */
-`;
+export const Logotext = styled.p `
+    
+    @media (max-width: 768px){
+      display: none;
+    }
+`
+    export const Logoimg = styled.p `
+    display: none;
+        
+        @media (max-width: 768px){
+            display: flex;
+           
+            
+        }
+    `
+;

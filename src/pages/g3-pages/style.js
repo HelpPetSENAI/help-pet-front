@@ -22,6 +22,11 @@ export const Title = styled.h2`
     font-weight: 500;
     line-height: 100%; /* 40px */
     margin-top: 30px;
+    
+    @media (max-width: 768px) {
+        font-size: 32px;
+        
+    }
 
 `
 
@@ -36,18 +41,21 @@ export const Main = styled.div`
 `
 
 
+
 export const Info = styled.div`
 display: flex;
     align-items: center;
     flex-direction: column;
     
- 
-            
-
-
-    
-
+    @media (max-width: 768px) {
+        width: 100%;
+        
+        
+    }
 `
+
+
+
 
 export const WrapperContent = styled.div`
     display: flex;
@@ -60,7 +68,13 @@ export const WrapperContent = styled.div`
     border: 2px solid var(--clr-green-1000);
     background: var(--clr-green-100);
     gap: 30px;
-
+   
+    @media (max-width: 768px) {
+        justify-content: center;
+    }
+    
+        
+    
          ${({ $status }) => $status === "error" && `
          justify-content: center;
          `
@@ -71,7 +85,9 @@ export const WrapperContent = styled.div`
 export const CardWrapper = styled.div`
     display: flex;
     gap: 26px;
-    flex-wrap: wrap ;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     
 `
 

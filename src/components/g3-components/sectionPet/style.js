@@ -25,9 +25,20 @@ export const Text = styled.span`
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
+    
+    @media (max-width: 768px) {
+        font-size: 12px;
+        
+    }
 `
 
 export const Fundo = styled.img`    
     width: 580px;
     height: 350px;
+    
+    @media (max-width: 768px) {
+        width: 275px;
+        height: 175px;
+        
+    }
 `

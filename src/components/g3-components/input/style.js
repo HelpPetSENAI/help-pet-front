@@ -3,10 +3,11 @@ import styled  from "styled-components";
 export const Input = styled.div`
     display: flex;
     width: 400px;
+    height: 44px;
     padding: 10px;
     align-items: center;
     gap: 8px;
-    align-self: stretch;
+   
     background: var(--clr-green-500);
     border:2px solid var(--clr-green-1000);\
     margin: 20px 0;
@@ -14,6 +15,12 @@ export const Input = styled.div`
     ${({ $status }) => $status === "success" &&`
     width: 1220px;
     `}
+    
+    @media (max-width: 768px) {
+    width: 315px;
+    
+    
+}
     
     
 `;

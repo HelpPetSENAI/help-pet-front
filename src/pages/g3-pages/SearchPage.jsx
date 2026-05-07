@@ -109,7 +109,8 @@ export default function SearchPage() {
 
                              )}
 
-                    <Inpust input={query}
+                    <Inpust $status={status}
+                        input={query}
                             onChange={(e) => setQuery(e.target.value)}
                              onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
                     />
