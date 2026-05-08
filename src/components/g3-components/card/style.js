@@ -16,6 +16,11 @@ export const CardContainer = styled.div`
     background: var(--crl-neutral-100, #FFF);
 
     box-shadow: 2px 2px 0 0 var(--crl-red-1000, #160404);
+
+       @media (max-width: 350px) {
+        width: 300px
+        
+    }
 `;
 
 export const PetImgContainer = styled.img`

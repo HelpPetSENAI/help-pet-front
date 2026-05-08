@@ -30,6 +30,11 @@ export const TextNotFound = styled.span`
         font-size: 16px;
         
     }
+
+       @media (max-width: 350px) {
+        margin-bottom: 15px;
+        
+    }
 `
 
 export const NotFound = styled.img`    

@@ -18,9 +18,11 @@ export const Input = styled.div`
     
     @media (max-width: 768px) {
     width: 315px;
-    
-    
 }
+
+    @media(max-width: 350px){
+     width: 95%;
+    }
     
     
 `;

@@ -30,6 +30,12 @@ export const Text = styled.span`
         font-size: 12px;
         
     }
+
+      @media (max-width: 350px) {
+        margin-bottom: 15px;
+        
+    }
+    
 `
 
 export const Fundo = styled.img`    

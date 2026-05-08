@@ -9,6 +9,8 @@ export const Filter = styled.div`
     flex: 1 0 0;
     align-self: stretch;
     gap: 17px;
+
+    
     
 
 `
@@ -23,9 +25,14 @@ export const Title = styled.h2`
     line-height: 100%; /* 40px */
     margin-top: 30px;
     
+
     @media (max-width: 768px) {
         font-size: 32px;
         
+    }
+
+    @media (max-width: 350px) {
+        font-size: 25px;
     }
 
 `
@@ -72,6 +79,8 @@ export const WrapperContent = styled.div`
     @media (max-width: 768px) {
         justify-content: center;
     }
+
+    
     
         
     
@@ -90,6 +99,8 @@ export const CardWrapper = styled.div`
     justify-content: center;
 
     padding-bottom: 26px ;
+
+    
     
 `
 

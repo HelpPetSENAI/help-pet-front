@@ -18,6 +18,12 @@ export const CardContainer= styled.a`
     height: 56px;
     margin: 16px 0;
 
+    @media (max-width: 350px){
+        font-size: 10px;
+        width: 36px;
+        height: 46px
+    }
+
 `
 export const CardEmoji= styled.div`
     display: flex;
@@ -30,10 +36,16 @@ export const CardEmoji= styled.div`
     border: 1px solid var(--clr-green-1000);
     background: var(--clr-neutral-100);
     box-shadow: 2px 2px 0 0 var(--clr-green-1000);
+
+
    
 `
 export const CardSpan = styled.span`
     font-size: 30px;
+
+    @media (max-width: 350px) {
+        font-size: 20px;
+    }
 `
 
 export const CardWrapper= styled.div`
