@@ -88,6 +88,8 @@ export const CardWrapper = styled.div`
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+
+    padding-bottom: 26px ;
     
 `
 
