@@ -3,8 +3,8 @@ import ComingSoonPage from './pages/CommingSoonPage'
 import NotFoundPage from './pages/NotFoundPage.jsx'
 import GlobalStyle from './styles/GlobalStyle.js'
 import ExamplePage from './pages/ExamplePage.jsx'
-import MessagePageG6 from './pages/page-g6/MessagePageG6.jsx'
-
+import SearchPage from "./pages/g3-pages/SearchPage.jsx";
+import MessagePage from "./pages/page-g6/MessagePageG6.jsx"
 const router = createBrowserRouter([
   {
     path: '/',
@@ -21,7 +21,11 @@ const router = createBrowserRouter([
   },
   {
     path: '/message',
-    element: <MessagePageG6 />
+    element: <MessagePage/>
+  },  
+  {
+    path: '/searchPage',
+    element: <SearchPage />,
   },
 ])
 
