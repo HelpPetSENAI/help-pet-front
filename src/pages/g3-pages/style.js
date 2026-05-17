@@ -9,6 +9,7 @@ export const Filter = styled.div`
   flex: 1 0 0;
   align-self: stretch;
   gap: 17px;
+  flex-wrap: wrap;
 `;
 
 export const Title = styled.h2`
@@ -53,6 +54,8 @@ export const Info = styled.div`
 `;
 export const WrapperContent = styled.div`
   display: flex;
+  width: 100%;
+  box-sizing: border-box;
   padding: 0 30px;
   flex-direction: column;
   align-items: center;
@@ -65,6 +68,7 @@ export const WrapperContent = styled.div`
 
   @media (max-width: 768px) {
     justify-content: center;
+    padding: 0 16px;
   }
   ${({ $status }) =>
     $status === "error" &&

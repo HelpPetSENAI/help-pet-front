@@ -79,14 +79,25 @@ export default function SearchPage() {
       pet.ageMonths >= numberTerm * 12 &&
       pet.ageMonths < (numberTerm + 1) * 12;
 
-    const matchText =
+    const matchSpecies =
+      selectedSpecies === "" ||
+      pet.species.toLocaleLowerCase() === selectedSpecies.toLocaleLowerCase();
+
+    const matchSearch =
+      search == "" ||
       pet.name?.toLocaleLowerCase().includes(search) ||
       pet.breed?.toLocaleLowerCase().includes(search) ||
-      pet.species?.toLocaleLowerCase().includes(search);
+      pet.species?.toLocaleLowerCase().includes(search) ||
+      pet.size?.toLocaleLowerCase().includes(search) ||
+      pet.description?.toLocaleLowerCase().includes(search);
 
     const matchFilhote = selectedFilter !== "filhote" || pet.ageMonths <= 12;
 
-    return matchText || matchYears || (search === "" && matchFilhote);
+    return (
+      (matchSearch || matchYears || (search === "" && matchFilhote)) &&
+      matchSpecies &&
+      matchFilhote
+    );
   });
 
   return (
