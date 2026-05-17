@@ -8,6 +8,7 @@ import Login from "./pages/Login/Login.jsx";
 import Background from "./components/Background/Background.jsx";
 
 import GlobalStyle from "./styles/GlobalStyle.js";
+import SignUp from "./pages/SignUp/SignUp.jsx";
 import MessagePageG6 from './pages/page-g6/MessagePageG6.jsx'
 
 const router = createBrowserRouter([
@@ -32,9 +33,16 @@ errorElement: <NotFoundPage />
     path: "/login",
     element: <Login />
   },
-  ]);
-
-
+  
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/signup",
+    element: <SignUp />
+  },
+  ]); 
 export default function App() {
   return (
     <>
