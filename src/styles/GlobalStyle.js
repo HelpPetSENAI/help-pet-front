@@ -1,7 +1,5 @@
-// importando a função createGlobalStyle em chaves porque não é uma função export default
 import { createGlobalStyle } from "styled-components";
 
-// definindo o reset e variáveis globais normalmente
 const GlobalStyle = createGlobalStyle`
 
     * {
@@ -97,6 +95,8 @@ const GlobalStyle = createGlobalStyle`
         --clr-neutral-800: #393939;
         --clr-neutral-900: #1C1C1C;
         --clr-neutral-1000: #000000;
+
+        --gShadow-min: 2px 2px #061407;
     }
 `
 

@@ -1,31 +1,47 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import ComingSoonPage from './pages/CommingSoonPage.jsx'
-import NotFoundPage from './pages/NotFoundPage.jsx'
-import GlobalStyle from './styles/GlobalStyle.js'
-import ExamplePage from './pages/ExamplePage.jsx'
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-// Criando uma array para definir as rotas do site utilizando a função createBrowserRouter importada
+import ComingSoonPage from "./pages/CommingSoonPage.jsx";
+import NotFoundPage from "./pages/NotFoundPage.jsx";
+import ExamplePage from "./pages/ExamplePage.jsx";
+import Login from "./pages/Login/Login.jsx";
+
+import GlobalStyle from "./styles/GlobalStyle.js";
+import SignUp from "./pages/SignUp/SignUp.jsx";
+import MessagePageG6 from './pages/page-g6/MessagePageG6.jsx'
+
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <ComingSoonPage />,
-    // Error element aparece no caso de digitar um endereço que não existe, link com caminho errado ou erros de carregamento
-    // Apenas essa declaração de error element aparece em caso de erro em qualquer página
     errorElement: <NotFoundPage />
+  },
+  {
+    path: '/coming-soon',
+    element: <ComingSoonPage />
   },
   {
     path: '/example',
     element: <ExamplePage />
-  }
-])
-
+  },
+  {
+    path: '/message',
+    element: <MessagePageG6 />
+  },
+  
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/signup",
+    element: <SignUp />
+  },
+  ]); 
 export default function App() {
-
   return (
     <>
       <GlobalStyle />
-      {/* RouterProvider fornece as rotas definidas acima para serem renderizadas através do atríbuto router */}
       <RouterProvider router={router} />
     </>
-  )
+  );
 }
