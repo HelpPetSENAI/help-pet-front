@@ -1,9 +1,11 @@
+
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import ComingSoonPage from "./pages/CommingSoonPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 import ExamplePage from "./pages/ExamplePage.jsx";
 import Login from "./pages/Login/Login.jsx";
+import Background from "./components/Background/Background.jsx";
 
 import GlobalStyle from "./styles/GlobalStyle.js";
 import SignUp from "./pages/SignUp/SignUp.jsx";
@@ -13,7 +15,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <ComingSoonPage />,
-    errorElement: <NotFoundPage />
+errorElement: <NotFoundPage />
   },
   {
     path: '/coming-soon',
@@ -26,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: '/message',
     element: <MessagePageG6 />
+  },  
+  {
+    path: "/login",
+    element: <Login />
   },
   
   {
