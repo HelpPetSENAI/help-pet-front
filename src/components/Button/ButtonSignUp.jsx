@@ -1,9 +1,9 @@
 import { StyledButton } from "../../styles/ButtonStyle";
 
-export default function ButtonLogin({ onClick, loading }) {
+export default function ButtonSignUp({ onClick, loading }) {
   return (
     <StyledButton onClick={onClick} disabled={loading}>
-      {loading ? "Entrando..." : "Fazer Login"}
+      {loading ? "Cadastrando..." : "Cadastrar-se"}
     </StyledButton>
   );
 }
