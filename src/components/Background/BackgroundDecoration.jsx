@@ -1,5 +1,5 @@
 import styed, { styled } from "styled-components"
-import decor from "../../assets/icons/decor.svg"
+import decor from "../../assets/images/decor.svg"
 
 const Decor = styled.div`
 
