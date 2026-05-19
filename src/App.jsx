@@ -3,7 +3,9 @@ import ComingSoonPage from './pages/CommingSoonPage'
 import NotFoundPage from './pages/NotFoundPage.jsx'
 import GlobalStyle from './styles/GlobalStyle.js'
 import ExamplePage from './pages/ExamplePage.jsx'
+import PetPage from "./pages/g5-pages/PetPage.jsx";
 import MessagePageG6 from './pages/page-g6/MessagePageG6.jsx'
+import DonationsPage from "./pages/g5-pages/DonationsPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -20,9 +22,17 @@ const router = createBrowserRouter([
     element: <ExamplePage />
   },
   {
+    path: '/petPage/:id',
+    element: <PetPage />
+  },
+  {
     path: '/message',
     element: <MessagePageG6 />
   },
+  {
+    path: '/donations',
+    element: <DonationsPage />,
+  }
 ])
 
 export default function App() {
