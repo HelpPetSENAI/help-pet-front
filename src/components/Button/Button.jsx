@@ -1,9 +1,9 @@
 import { StyledButton } from "./ButtonStyle";
+export default function ButtonLogin({ onClick, loading }) {
+  return (
+    <StyledButton onClick={onClick} disabled={loading}>
+      {loading ? "Entrando..." : "Fazer Login"}
+    </StyledButton>
+  );
 
-export default function Button({content}) {
-    return(
-        <StyledButton>
-                {content} 
-        </StyledButton>
-    )
 }
