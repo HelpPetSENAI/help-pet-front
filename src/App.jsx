@@ -11,7 +11,7 @@ import MessagePageG6 from './pages/page-g6/MessagePageG6.jsx'
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <ComingSoonPage />,
     errorElement: <NotFoundPage />
   },
@@ -27,21 +27,13 @@ const router = createBrowserRouter([
     path: '/message',
     element: <MessagePageG6 />
   },
-  
-  {
-    path: "/login",
-    element: <Login />,
-  },
-  {
-    path: "/signup",
-    element: <SignUp />
-  },
-  ]); 
+])
+
 export default function App() {
   return (
     <>
       <GlobalStyle />
       <RouterProvider router={router} />
     </>
-  );
+  )
 }
