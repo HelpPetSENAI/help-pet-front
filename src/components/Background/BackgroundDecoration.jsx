@@ -1,18 +1,17 @@
-import styed, { styled } from "styled-components"
-import decor from "../../assets/images/decor.svg"
+import styled from "styled-components";
+import decor from "../../assets/images/decor.svg";
 
 const Decor = styled.div`
-
   position: absolute;
   inset: 0;
 
   background: url(${decor}) no-repeat right center;
-  background-size: 50%;
-  opacity: 0.25;
+  background-size: contain;
 
-  pointer-events: none; 
+  opacity: 0.25;
+  pointer-events: none;
 `;
 
-export default function BackgroundImages() {
+export default function BackgroundDecoration() {
   return <Decor />;
 }
