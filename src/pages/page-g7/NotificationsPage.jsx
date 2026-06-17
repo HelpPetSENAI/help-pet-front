@@ -1,17 +1,19 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { NotificationsContainer } from './NotificationPage.style'; 
-import Header from '../../components/Shared/Header/Header'
+// import Header from '../../components/Shared/Header/Header';
+import HeaderSideBar from '../../components/HeaderSideBar/HeaderSideBar';
 
 export default function Notifications() {
   const [activeTab, setActiveTab] = useState('sistema');
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [notifications, setNotifications] = useState([]);
   
   // Substitua pelo ID real de um usuário do seu banco de dados
   const userId = "COLOQUE-UM-UUID-VALIDO-AQUI"; 
 
   // 🌐 SUA NOVA URL BASE DO AZURE
-  const BASE_URL = "https://testahelppet-notification.azurewebsites.net";
+  // const BASE_URL = "https://testahelppet-notification.azurewebsites.net";  
 
   useEffect(() => {
     fetchNotifications();
@@ -52,7 +54,8 @@ export default function Notifications() {
 
   return (
     <NotificationsContainer>
-      <Header />
+      {/* <Header /> */}
+      <HeaderSideBar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
       {/* MENU DE ABAS */}
       <div className="tab-container">
         <button 
@@ -84,7 +87,7 @@ export default function Notifications() {
         <div className="tab-content active">
           <div className="content-header">
             <div className={`circle circle-${activeTab}`}></div>
-            <h3 style={{textTransform: 'capitalize'}}>{activeTab === 'adocao' ? 'Adoções' : activeTab}</h3>
+            <h3 style={{ textTransform: 'capitalize' }}>{activeTab === 'adocao' ? 'Adoções' : activeTab}</h3>
           </div>
           
           {currentTabNotifications.length > 0 ? (
